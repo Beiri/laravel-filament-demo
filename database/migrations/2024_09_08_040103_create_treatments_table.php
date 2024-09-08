@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->text('notes')->nullable();
-            $table->foreignId('owner_id')->constrained('owners')->cascadeOnDelete();
-            $table->string('type');
+            $table->foreignId('patient_id')->constrained('patients')->cascadeOnDelete();
+            $table->string('price')->nullable();
             $table->timestamps();
         });
     }
